@@ -1,20 +1,23 @@
 :root{
     --gray:#d7d5d6;
-    --white:#fff    
+    --white:#fff ;   
+      --blue: #0d72bf;  
+/*   --pink: #ff4c68; */
+/*       --pink: #f03878;    */
     }
 
 
 
-
-h2{
-   color: green;
- }
 /* header  */
 #header{
   display:flex;
   background:var(--gray) ;
-
 }
+
+.header-title{
+  margin-left:70px;
+}
+
  .header-h1{
    text-align: center;
     font-weight: 700;
@@ -30,14 +33,13 @@ h2{
 .Book-btn{
     border: none;
     border-radius: 7px;
-    width: 12em;
+    width: 70%;  
     height: 50px;
-/*     background-color: #f03878; */
-    background-color: #0d72bf;
-  
+/*   background-color:var(--pink) ; */
+    background-color:var(--blue) ; 
     color: var(--white);
     font-size: large;
-    margin-left: 14em;  
+    margin-left: 5em;  
   margin-top:65px;
 }
 
@@ -47,13 +49,14 @@ h2{
 
 
 img{
-   width: 70%;  
-  margin:15em  10px 90px 10em;
+   width: 80%;  
+  margin:10em 10px 90px 10em;
+      transform: rotate(2deg);
   
 }
   iframe{
-        width: 300px;
-        height: 180px;
+        width: 45%;
+        height: 160px;
         position: absolute;
         left:20px;
        bottom: 5pt;
@@ -63,7 +66,12 @@ img{
 
 /* * media query */ 
 
-        @media (max-width: 768px) {
+   @media (max-width: 768px) {
+     
+.header-title{
+  margin-left: 0;
+}
+     
  .header-h1{
    text-align: center;
     font-weight: 500;
@@ -78,76 +86,34 @@ img{
 
 .Book-btn{  
    font-size: 0.8em;
-    margin:20px 75px 5px ;      
+    margin:20px 75px 10px ;  
+  width: 50%;
+    height: 40px;
 }
 
-          
-      iframe{
-        width: 180px;
-        height: 100px;
-        position: absolute;
-         right:20pt;
-         bottom: -10px;
     
-      }      
+iframe{
+  width: 45%;        
+  height: 90px;
+ position: absolute;
+ left:90pt;
+ bottom: -12px;
+ } 
+     
 img{
   width: 100%;
   height: 10em;
    margin:0 0;
+   transform: none;
 }
-
-
-
-   #header{
+ #header{
   display:flex;
   flex-direction:column;
 }
-            }
+     
+ }
 
 
-
-
-  @media (min-width: 992px) {
-
-/*        #header{
-  display:flex;
-  flex-direction:column;
-} */
-/* .header-h1{
-   text-align: center;
-    font-weight: 700;
-    font-size: 1.9rem; 
-   margin:3em 0 0 0;
-    }
-
-.header-p{
-      text-align: center;    
-        font-size: 1.1rem;  
-}
-
-    
-    .Book-btn{ 
-       font-size: small; 
-    margin: 20px 0 5px 20em;      
-} */
-
-
-/*               
-      iframe{
-        width: 180px;
-        height: 100px;
-        position: absolute;
-         right:20pt;
-         bottom: -10px;
-    
-      }       */
-/* img{
-  width: 100%;
-  height: 15em;
-   margin:auto;
-} */
-
-  }
 
 
 /* Form Field */
