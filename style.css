@@ -1,14 +1,24 @@
 :root{
     --gray:#d7d5d6;
     --white:#fff ;   
-      --blue: #0d72bf;  
-/*   --pink: #ff4c68; */
-/*       --pink: #f03878;    */
+/*     --lightGreen: #acd161; */
+  --lightGreen: #8eba36;
+/*   --lightGreen: #9dc44f; */
+      --blue: #8da3b4;  
+  
+  
+  
+  
     }
 
-
+a{
+  background-color:inherit ; 
+  color: var(--white);
+  text-decoration: none;
+}
 
 /* header  */
+
 #header{
   display:flex;
   background:var(--gray) ;
@@ -29,38 +39,47 @@
       text-align: center;    
         font-size: 1.0rem;  
 }
-
+.header-highlight{
+  color: var(--lightGreen);
+}
 .Book-btn{
     border: none;
     border-radius: 7px;
-    width: 70%;  
+    width: 50%;    
     height: 50px;
-/*   background-color:var(--pink) ; */
-    background-color:var(--blue) ; 
+    background-color:var(--lightGreen) ;   
     color: var(--white);
     font-size: large;
     margin-left: 5em;  
-  margin-top:65px;
+  margin-top:75px;
 }
 
+ .Book-btn:hover{
+    background-color:var(--blue) ;  
+   
+   } 
+ 
 .media{
   position: relative;
 }
 
+@keyframes img {
+  0%   {mix-blend-mode:multiply;}
+  100% {   mix-blend-mode:luminosity;}
+}
 
-img{
-   width: 80%;  
+
+img {
+   width: 80%; 
+  height:auto;
   margin:10em 10px 90px 10em;
       transform: rotate(2deg);
-  
+    mix-blend-mode:darken;
+  animation-name: img;
+  animation-duration: 15s;
+    animation-delay: 8s;
+    animation-iteration-count: infinite;
 }
-  iframe{
-        width: 45%;
-        height: 160px;
-        position: absolute;
-        left:20px;
-       bottom: 5pt;
-      }   
 
 
 
@@ -85,39 +104,75 @@ img{
 }
 
 .Book-btn{  
-   font-size: 0.8em;
-    margin:20px 75px 10px ;  
-  width: 50%;
-    height: 40px;
+   font-size: 0.8em;  
+      width:50%;  
+    margin:20px 90px 10px ;  
+      height: auto;
 }
 
-    
-iframe{
-  width: 45%;        
-  height: 90px;
- position: absolute;
- left:90pt;
- bottom: -12px;
- } 
-     
+
 img{
   width: 100%;
-  height: 10em;
+  height: auto;
    margin:0 0;
    transform: none;
+  mix-blend-mode:multiply;
+
 }
+   
+
+    
  #header{
   display:flex;
   flex-direction:column;
-}
-     
+}     
  }
+/* (max-width: 1024px) */
+
+@media   
+(max-width: 1024px)
+  and (orientation: landscape) {
+
+  img{
+  width: 100%;
+  height: auto;
+   transform: none;
+  mix-blend-mode:multiply;
+    margin:20% 0 5px 0;    
+
+}
+  
+.Book-btn{  
+/*    font-size: 0.8em;   */
+      width:50%;  
+    margin:40px 0 30px 25%;  
+      height: auto;
+}
+
+  .header-title{
+  margin-left:20px;
+}
+
+ .header-h1{
+   text-align: center;
+    font-weight: 700;
+    font-size: 2.0rem; 
+   margin:3em 20px 0 7px ;
+    }
+}
+
+
+
+
+
+
+
 
 
 
 
 /* Form Field */
-body {
+.form-container {
     background-image: linear-gradient(to bottom right, blue, yellow);
 }
 
