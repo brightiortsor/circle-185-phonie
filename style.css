@@ -129,9 +129,7 @@ img{
  }
 /* (orientation: landscape) */
 
-@media   
-/* (max-width: 1024px) */
- (orientation: landscape) {
+@media  (orientation: landscape) {
 
   img{
   width: 100%;
@@ -143,7 +141,7 @@ img{
 }
   
 .Book-btn{  
-/*    font-size: 0.8em;   */
+
       width:50%;  
     margin:40px 0 30px 25%;  
       height: auto;
@@ -165,42 +163,6 @@ img{
 
 
 /* (max-width: 1024px) */
-
-@media  (max-width: 1024px) 
-/* and  (min-width: 1026px)  */
-{
-
-/*   img{
-  width: 100%;
-  height: auto;
-   transform: none;
-  mix-blend-mode:multiply;
-    margin:20% 0 5px 0;    
-
-}
-   */
-.Book-btn{  
-/*    font-size: 0.8em;   */
-      width:50%;  
-    margin:40px 0 30px 25%;  
-      height: auto;
-}
-
-/*   .header-title{
-  margin-left:20px;
-}
-
- .header-h1{
-   text-align: center;
-    font-weight: 700;
-    font-size: 2.0rem; 
-   margin:3em 20px 0 7px ;
-    } */
-}
-
-
-
-
 
 
 
