@@ -1,13 +1,9 @@
 :root{
-    --gray:#d7d5d6;
+    --whitte:#eee;  
+/*     --gray:#d7d5d6; */
     --white:#fff ;   
   --lightGreen: #8eba36;
-      --blue: #8da3b4;  
-  
-
-  
-  
-  
+      --purple:#ccccf5   
     }
 
 a{
@@ -20,7 +16,7 @@ a{
 
 #header{
   display:flex;
-  background:var(--gray) ;
+  background:var(--whitte) ;
 }
 
 .header-title{
@@ -29,9 +25,9 @@ a{
 
  .header-h1{
    text-align: center;
-    font-weight: 700;
+    font-weight: 1200;
     font-size: 2.5rem; 
-   margin:3em 0 0 7px ;
+   margin:4em 0 0 7px ;
     }
 
 .header-p{
@@ -46,7 +42,7 @@ a{
     border-radius: 7px;
     width: 50%;    
     height: 50px;
-    background-color:var(--lightGreen) ;   
+   background-color:var(--purple) ;
     color: var(--white);
     font-size: large;
     margin-left: 5em;  
@@ -54,9 +50,8 @@ a{
 }
 
  .Book-btn:hover{
-    background-color:var(--blue) ;  
-   
-   } 
+    background-color:var(--lightGreen) ;   
+       } 
  
 .media{
   position: relative;
@@ -66,7 +61,6 @@ a{
   0%   {mix-blend-mode:multiply;}
   100% {   mix-blend-mode:luminosity;}
 }
-
 
 img {
    width: 80%; 
@@ -105,8 +99,7 @@ img {
 .Book-btn{  
    font-size: 0.8em;  
       width:50%;  
-/*     margin:20px 140px 10px ;   */
-  
+/*     margin:20px 140px 10px ;   */  
     margin:auto ;  
       height: auto;
 }
@@ -119,14 +112,13 @@ img{
    transform: none;
   mix-blend-mode:multiply;
 
-}  
-
+} 
     
  #header{
   display:flex;
   flex-direction:column;
-}     
- }
+}
+}
 
 
 /* (orientation: landscape) */
@@ -136,16 +128,14 @@ img{
   img{
   width: 100%;
   height: auto;
-/*    transform: none; */
   mix-blend-mode:multiply;
-/*     margin:20% 0 5px 0;     */
+    
 
 }
   
 .Book-btn{  
-
       width:70%;  
-    margin:70px 0 30px 10%;  
+    margin:70px 0 30px 16%;  
       height: auto;
 }
 
@@ -156,9 +146,10 @@ img{
  .header-h1{
    text-align: center;
     font-weight: 700;
-    font-size: 2.0rem; 
+    font-size: 2.5rem; 
    margin:3em 20px 0 7px ;
     }
+  
 }
 
 
@@ -166,13 +157,10 @@ img{
 
 /* (max-width: 1024px) */
 @media  (max-width: 1024px) { 
-  
-.Book-btn{  
+  .Book-btn{  
       width:50%;  
     margin:40px 0 30px 25%; 
-}
-
-  
+} 
 }
 
 
@@ -212,6 +200,14 @@ h1, p {
     width: 100%;
   }
 
+ #phone {
+   position:relative;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #0000;
+    width: 100%;
+  }
   input::placeholder {
     color: rgba(0, 0, 0, 0.317);
   }
@@ -239,4 +235,28 @@ h1, p {
     color: white;
     cursor: pointer;
   }
-    
+
+#logo{   
+    position: absolute;
+    left: 70%;
+    bottom: 58.5%;
+    visibility: visible;
+}
+
+/* style for the phone container div */
+/* .input-container {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+} */
+/* .logo1 {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  transition: right 0.2s;
+} */
+
+
+/* bookings  */
+
+
