@@ -1,69 +1,41 @@
-//  document.getElementById("phone").addEventListener('blur', validatePhone);
-document.getElementById("btn-now").addEventListener('click', clickNow);
+// Regex for phone number patterns
+const mtnRegex = /^(\+?([\d]{1,3})?[0]?((([7-9]{1})[0]([36]{1}))|([8][1]([0346]{1})))\d{7})$/g,
+  etisalatRegex = /^(\+?([\d]{1,3})?[0]?((([8-9]{1})[0]([9]{1}))|(([9]{1})[0]([8]{1}))|([8][1]([78]{1})))\d{7})$/g,
+  airtelRegex = /^(\+?([\d]{1,3})?[0]?((([8-9]{1})[0]([2]{1}))|(([7-8]{1})[0]([8]{1}))|(([9]{1})[0]([17]{1}))|([8][1]([2]{1}))|([7][0]([1]{1})))\d{7})$/g,
+  gloRegex = /^(\+?([\d]{1,3})?[0]?((([7-9]{1})[0]([57]{1}))|([81]([15]{1})))\d{7})$/g,
+  phoneNoInput = document.querySelector("#phone"),
+  carrierLogo = document.querySelector(".logo");
 
-// function validatePhone(){  
-//   const phone = document.getElementById("phone");
-//     const re = /^[0]([7-9]{1})[0]([365728])?\d{7}$/;
-
-//     Pattern for MTN carrier: 0703, 0706, 0803, 0806, 0903, 0906
-//     Pattern for GLO carrier: 0705, 0707, 0805, 0807, 0905, 0907
-//     Pattern for Airtel carrier: 0702, 0708, 0802, 0808, 0902, 0908
-//     Anything outside of these patterns throws an error message
-
-//     if(!re.test(phone.value)){
-//         const errorMessage = document.getElementById('invalid')
-//         errorMessage.textContent = "Enter a valid carrier number"
-//         errorMessage.style.color = "red"
-//     } else {
-//         const errorMessage = document.getElementById('invalid')
-//         errorMessage.textContent = ""
-//     }
-// }
-
-function clickNow() {
-  alert("Congratulations, you've successfully booked an appointment!");
-}
-
-
-
-// I WORKED WITH THOSE DATA YOU GAVE ABOVE,  then i  added some other data
- document.getElementById("phone").addEventListener('blur', myFunction); 
-function myFunction() {
-  const phone = document.getElementById("phone").value;
-  const mtn =  /^[0]([7-9]{1})([0,1]{1})([0,3,2,4,6]{1})\d{7}$/;
-  const GLO =  /^[0]([7-9]{1})[0,1]([1,5,7]{1})\d{7}$/; 
-  const Airtel = /^[0]([7-9]{1})[0]([2,8]{1})\d{7}$/;
-
-  if(mtn.test(phone)){
-  const logo = document.getElementById("logo")
-  logo.innerHTML = 'MTN';
-  logo.style.visibility = 'visible';
-  } else if(GLO.test(phone)){
-    const logo = document.getElementById("logo")
-    logo.innerHTML = 'GLO';
-    logo.style.visibility = 'visible';
-   } else if(Airtel.test(phone)){
-    const logo = document.getElementById("logo")
-    logo.innerHTML = 'AIRTEL';
-    logo.style.visibility = 'visible';
-   } else if ( mtn.test(phone) !== true || GLO.test(phone) !== true || Airtel.test(phone) !== true || phone == "") {
-    const logo = document.getElementById("logo")
-    logo.innerHTML = 'NULL';
-    logo.style.visibility = 'visible';
-    logo.style.color='red';
-  }
-  
-}
+// Phone carrier logos
+const mtnLogo = '<img src="./images/mtn-logo.jpeg">',
+  airtelLogo = '<img src="./images/airtel-logo.jpeg">',
+  gloLogo = '<img src="./images/glo-logo.jpg">',
+  etisalatLogo = '<img src="./images/9mobile-logo.png">';
 
 function startApp() {
-    // Your entire app should not necessarily be coded inside this 
-    // single function (though there's no penalty for that), 
-    // so create and use/call additional functions from here
-  
-    // pls remove the below and make some magic in here!
+  phoneNoInput.addEventListener("keyup", testNumber)
+};
 
-  };
+function phoneNumberCheck(regEx, inputValue, logoName) {
+  if (regEx.test(inputValue)) {
+    carrierLogo.innerHTML = logoName;
+    return true
+  } else {
+    carrierLogo.innerHTML = "";
+    return false
+  }
+}
 
+function testNumber(e) {
+  const numInput = e.target.value;
+  const carrierDetails = [[etisalatRegex, numInput, etisalatLogo], [mtnRegex, numInput, mtnLogo], [airtelRegex, numInput, airtelLogo], [gloRegex, numInput, gloLogo]]
+  for (let i = 0; i < carrierDetails.length; i++) {
+    let carrier = carrierDetails[i]
+    if (phoneNumberCheck(...carrier)) {
+      break
+    };
+  }
+}
 
   // ======= DO NOT EDIT ============== //
   export default startApp;
