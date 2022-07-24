@@ -40,13 +40,13 @@ a{
 .Book-btn{
     border: none;
     border-radius: 7px;
-    width: 50%;    
-    height: 50px;
-   background-color:var(--purple) ;
+    width: 100%;    
+    padding: 10px 0;
+    background-color: black ;
     color: var(--white);
     font-size: large;
     margin-left: 5em;  
-  margin-top:75px;
+    margin-top: 75px;
 }
 
  .Book-btn:hover{
@@ -57,16 +57,16 @@ a{
   position: relative;
 }
 
-@keyframes img {
+@keyframes .image {
   0%   {mix-blend-mode:multiply;}
   100% {   mix-blend-mode:luminosity;}
 }
 
-img {
+ .image {
    width: 80%; 
-  height:auto;
-  margin:10em 1px 90px 10em;
-  transform: rotate(2deg);
+  height: auto;
+   margin: 15px 0; 
+/*   transform: rotate(2deg); */
     mix-blend-mode:darken;
   animation-name: img;
   animation-duration: 15s;
@@ -98,17 +98,16 @@ img {
 
 .Book-btn{  
    font-size: 0.8em;  
-      width:50%;  
-/*     margin:20px 140px 10px ;   */  
+      width:50%;   
     margin:auto ;  
       height: auto;
 }
 
 
-img{
+ .image{
   width: 100%;
   height: auto;
-   margin:0 0;
+/*    margin:0 0; */
    transform: none;
   mix-blend-mode:multiply;
 
@@ -127,12 +126,12 @@ img{
 
 @media  (orientation: landscape) {
 
-  img{
+  .image{
   width: 100%;
   height: auto;
   mix-blend-mode:multiply;
 }
-  
+   
 .Book-btn{  
       width:70%;  
     margin:70px 0 30px 16%;  
@@ -172,7 +171,6 @@ img{
     visibility: hidden;
 }
 }
-
 
 
 /* Form Field */
