@@ -2,8 +2,8 @@
     --gray:#d7d5d6;
     --white:#fff ;   
   --lightGreen: #8eba36;
-      --blue: #9c8b91;  
-/*       --blue: #8da3b4;   */
+/*       --blue: #808080;   */
+      --blue: #8a8d8f;  
   
 /*       --blue: #bcb9ba;   */
   
@@ -106,7 +106,7 @@ img {
 .Book-btn{  
    font-size: 0.8em;  
       width:50%;  
-    margin:20px 140px 10px ;  
+    margin:20px 25% 10px ;  
       height: auto;
 }
 
@@ -136,8 +136,6 @@ img{
   height: auto;
    transform: none;
   mix-blend-mode:multiply;
-    margin:20% 0 5px 0;    
-
 }
   
 .Book-btn{  
@@ -163,6 +161,26 @@ img{
 
 
 /* (max-width: 1024px) */
+  @media  (min-width: 1024px) {
+.header-title{
+  margin-left:90px;
+  margin-top:90px;
+  
+}
+
+    
+.Book-btn{  
+      width:80%;  
+    margin:80px 0 30px 12%;  
+      height: auto;
+}
+    
+  img{
+  height: auto;
+  mix-blend-mode:multiply;
+}
+  }
+
 
 
 
