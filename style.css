@@ -255,8 +255,136 @@ form .txt_field {
 }
 
 
+/* Doctors flexbox  */
+/* This section is still under "active edit" as some of the classes are conflicting with others thus changing the whole UI orientation. Take note but you can help edit if possible */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.cards {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        place-items: center;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        place-items: center;
+    }
+}
 
 
-/* bookings  */
+.image {
+    height: 250px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 15px 15px 0 0;
+}
+
+.card {
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(184, 172, 238);
+}
+
+@media only screen and (max-width: 425px) {
+    .card {
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .card {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width: 992px) {
+    .card {
+        width: 350px;
+    }
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px ;
+}
+
+#card-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 425px) {
+    #card-title {
+        font-size: 20px;
+    }
+}
+
+p, a {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 425px) {
+    p, a {
+        font-size: 14px;
+    }
+}
+
+h5, p, a {
+    margin-top: 15px;
+}
+
+/* a {
+    color: black;
+    background-color: rgb(187, 150, 206);
+    text-decoration: none;
+    border: 1px solid black;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+}
+ */
+a:hover {
+    color: white;
+    background-color: black;
+}
 
 
