@@ -174,24 +174,39 @@ a{
 
 
 /* Form Field */
-* {
-  box-sizing: border-box;
+
+.form-container {
+  background-image: linear-gradient(to bottom right, #bcb4c5, #bbbec9);
 }
 
-body {
-  font-family: sans-serif;
-    background-image: linear-gradient(to bottom right, gray, peachpuff);
-}
-
-main {
+.form-container form {
   margin-top: 60px;
   padding: 0 40px;
 }
+.text-1 {
+  text-align: center;
+  padding-top: 10px;
+}
+.text-2 {
+  text-align: center;
+  padding-top: 5px;
+}
 
-.container h4 {
-  font-weight: 500;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+.mtn {
+  background: yellow;
+  color: white;
+}
+.etisalat {
+  background: #042a04;
+  color: white;
+}
+.glo {
+  background: green;
+  color: white;
+}
+.airtel {
+  background: #a60c0c;
+  color: white;
 }
 
 .logo img {
@@ -212,9 +227,7 @@ form .txt_field {
   height: 40px;
   font-size: 16px;
   border: none;
-  background: none;
   outline: none;
-  font-family: sans-serif;
 }
 
 .txt_field label {
@@ -239,14 +252,13 @@ form .txt_field {
   position: relative;
   display: block;
   font-size: 1.5rem;
-  font-family: sans-serif;
   text-align: center;
   padding: 10px 0;
 }
 
 .book-button:hover {
   cursor: pointer;
-  background: #493f37;
+  background: #79af84;
   transition: 0.2s;
 }
 
@@ -262,6 +274,7 @@ form .txt_field {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 .cards {
     margin-top: 30px;
