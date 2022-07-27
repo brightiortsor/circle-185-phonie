@@ -384,7 +384,151 @@ h5, p, a {
  */
 a:hover {
     color: white;
-    background-color: black;
+/*     background-color: black; */
 }
 
 
+/* navbar styling */
+.navbar {
+  font-family: cursive;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  background-size: contain;
+  color: #000;
+  margin: 0;
+  padding: 20px;
+  /* making it fixed while scrolling */
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.links a {
+  color: #000;
+}
+
+/* styling the links */
+.menu {
+  display: flex;
+  font-size: 18px;
+  gap: 1em;
+}
+
+.menu li:hover {
+  color: blue;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+  list-style: none;
+}
+
+#navright :hover {
+  color: blue;
+}
+
+#text {
+  color: #fff;
+   font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* styling the button */
+.btn {
+  background-color: #000;
+  color: white;
+   font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+  width: auto;
+  border-radius: 7px;
+  border: none;
+  padding: 5px 10px;
+}
+
+.btn:hover {
+  background-color: #8eba36;
+}
+
+/* styling the logo */
+.logos {
+  background: #8eba36;
+  border-radius: 50%;
+  width: 71px;
+  height: 82px;
+  position: relative;
+  line-height: 0;
+  font-size: 32px;
+}
+.txt {
+  position: absolute;
+  bottom: 50%;
+  width: 98%;
+  text-align: center;
+  color: #fff;
+}
+
+/* styling the hamburger menu */
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+}
+
+/* making it responsive */
+@media screen and (max-width: 764px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: #eee;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  .menu li:hover {
+    display: inline-block;
+    color: blue;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  /* opens the hamburger menu when clicked on */
+  input[type="checkbox"]:checked ~ .menu {
+    display: inline-block;
+    margin: 30px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .txt {
+    position: absolute;
+    bottom: 50%;
+    width: 98%;
+    text-align: center;
+    color: #fff;
+  }
+}
+/* nav bar styling ends */
