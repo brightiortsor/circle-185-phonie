@@ -1,37 +1,37 @@
 // Regex for phone number patterns
-const mtnRegex = /^(\+?([\d]{1,3})?[0]?((([7-9]{1})[0]([36]{1}))|([8][1]([0346]{1})))\d{7})$/g,
-  etisalatRegex = /^(\+?([\d]{1,3})?[0]?((([8-9]{1})[0]([9]{1}))|(([9]{1})[0]([8]{1}))|([8][1]([78]{1})))\d{7})$/g,
-  airtelRegex = /^(\+?([\d]{1,3})?[0]?((([8-9]{1})[0]([2]{1}))|(([7-8]{1})[0]([8]{1}))|(([9]{1})[0]([17]{1}))|([8][1]([2]{1}))|([7][0]([1]{1})))\d{7})$/g,
-  gloRegex = /^(\+?([\d]{1,3})?[0]?((([7-9]{1})[0]([57]{1}))|([81]([15]{1})))\d{7})$/g,
-  phoneNoInput = document.querySelector("#phone"),
-  carrierLogo = document.querySelector(".logo");
+const mtn = /^([+][2][3][4])?[0]?((([7-9]{1})[0]([36]{1}))|([8][1]([0346]{1})))\d{7}$/g,
+  etisalat = /^([+][2][3][4])?[0]?((([8-9]{1})[0]([9]{1}))|(([9]{1})[0]([8]{1}))|([8][1]([78]{1})))\d{7}$/g,
+  airtel = /^([+][2][3][4])?[0]?((([8-9]{1})[0]([2]{1}))|(([7-8]{1})[0]([8]{1}))|(([9]{1})[0]([17]{1}))|([8][1]([2]{1}))|([7][0]([1]{1})))\d{7}$/g,
+ glo = /^([+][2][3][4])?[0]?((([7-9]{1})[0]([57]{1}))|(([8][1][1])|([8][1][5])))\d{7}$/g,
+  phoneNumber = document.querySelector("#phone"),
+  networkIcon = document.querySelector(".logo");
 
-// Phone carrier logos
-const mtnLogo = '<img src="./images/mtn-logo.jpeg">',
-  airtelLogo = '<img src="./images/airtel-logo.jpeg">',
-  gloLogo = '<img src="./images/glo-logo.jpg">',
-  etisalatLogo = '<img src="./images/9mobile-logo.png">';
+// Phone carrier icons
+const mtnIcon = '<img src="./images/mtn-logo.jpeg">',
+  airtelIcon = '<img src="./images/airtel-logo.jpeg">',
+  gloIcon = '<img src="./images/glo-logo.jpg">',
+  etisalatIcon = '<img src="./images/9mobile-logo.png">';
 
 function startApp() {
-  phoneNoInput.addEventListener("keyup", testNumber)
+  phoneNumber.addEventListener("keyup", verifyNumber)
 };
 
-function phoneNumberCheck(regEx, inputValue, logoName) {
-  if (regEx.test(inputValue)) {
-    carrierLogo.innerHTML = logoName;
+function testPhoneNumber(re, inputValue, iconName) {
+  if (re.test(inputValue)) {
+    networkIcon.innerHTML = iconName;
     return true
   } else {
-    carrierLogo.innerHTML = "";
+    networkIcon.innerHTML = "";
     return false
   }
 }
 
-function testNumber(e) {
-  const numInput = e.target.value;
-  const carrierDetails = [[etisalatRegex, numInput, etisalatLogo], [mtnRegex, numInput, mtnLogo], [airtelRegex, numInput, airtelLogo], [gloRegex, numInput, gloLogo]]
-  for (let i = 0; i < carrierDetails.length; i++) {
-    let carrier = carrierDetails[i]
-    if (phoneNumberCheck(...carrier)) {
+function verifyNumber(e) {
+  const phoneInput = e.target.value;
+  const networkCarrier = [[etisalat, phoneInput, etisalatIcon], [mtn, phoneInput, mtnIcon], [airtel, phoneInput, airtelIcon], [glo, phoneInput, gloIcon]]
+  for (let i = 0; i < networkCarrier.length; i++) {
+    let network = networkCarrier[i]
+    if (testPhoneNumber(...network)) {
       break
     };
   }
