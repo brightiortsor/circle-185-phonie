@@ -193,7 +193,7 @@ a{
 }
 
 .mtn {
-  background: gold;
+  background: #ffde24;
   color: white;
 }
 .etisalat {
@@ -245,6 +245,7 @@ form .input-area {
 }
 
 .book-button {
+  width:100%;
   background: black;
   color: white;
   position: relative;

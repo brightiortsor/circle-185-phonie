@@ -13,7 +13,7 @@ const mtnIcon = '<img src="./images/mtn-logo.jpeg">',
   etisalatIcon = '<img src="./images/9mobile-logo.png">';
 
 function startApp() {
-  phoneNumber.addEventListener("keyup", verifyNumber)
+  phoneNumber.addEventListener("keyup", verifyNumber);
 };
 
 function testPhoneNumber(re, inputValue, iconName) {
