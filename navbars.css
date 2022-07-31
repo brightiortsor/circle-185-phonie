@@ -96,7 +96,7 @@ input[type="checkbox"] {
 }
 
 /* making it responsive */
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 768px) {
   .menu {
     display: none;
     position: absolute;
