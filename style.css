@@ -305,7 +305,7 @@ form .input-area {
     height: 250px;
 }
 
-img {
+.doctor-img {
     width: 100%;
     height: 100%;
     object-fit: fill;
@@ -521,3 +521,31 @@ input[type="checkbox"] {
   }
 }
 /* nav bar styling ends */
+
+
+/* Footer starts*/
+.footer-container {
+  text-align: center;
+  padding: 10px 40px;
+  margin: auto;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.footer-div {
+  background: white;
+  color: black;
+  padding: 10px 0;
+  border: 10px solid #8eba36;
+}
+
+.footer-text {
+  color: blue;
+}
+
+div > a:hover {
+  color: red;
+}
+/* Footer Ends */
