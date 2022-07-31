@@ -382,11 +382,10 @@ h5, p, a {
 .navbar {
   font-family: cursive;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   background-color: #0b320b;
   background-size: contain;
-  color: #000;
+  color: #fff;
   margin: 0;
   padding: 20px;
   /* making it fixed while scrolling */
@@ -397,7 +396,7 @@ h5, p, a {
 }
 
 .links a {
-  color: #000;
+  color: #fff;
 }
 
 /* styling the links */
@@ -405,13 +404,10 @@ h5, p, a {
   display: flex;
   font-size: 18px;
   gap: 1em;
+ 
 }
 
-.menu li:hover {
-  color: blue;
-  border-radius: 5px;
-  transition: 0.3s ease;
-}
+
 
 .menu li {
   padding: 5px 14px;
@@ -419,8 +415,9 @@ h5, p, a {
 }
 
 #navright :hover {
-  color: blue;
+  color: #8eba36;
 }
+
 
 #text {
   color: #fff;
@@ -479,20 +476,20 @@ input[type="checkbox"] {
 }
 
 /* making it responsive */
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 768px) {
   .menu {
     display: none;
-    position: absolute;
-    background-color: #eee;
-    right: 0;
-    left: 0;
+    background-color: #0b320b;
+    color: #fff;
     text-align: center;
     padding: 10px;
     position: sticky;
-    top: 0;
     right: 0;
     z-index: 9999;
+    position: absolute;
+    top: 60px;
   }
+  
   .menu li:hover {
     display: inline-block;
     color: blue;
