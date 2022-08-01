@@ -508,6 +508,7 @@ input[type="checkbox"] {
 
   .hamburger {
     display: block;
+     margin-right:68px;
   }
   .txt {
     position: absolute;
