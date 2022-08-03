@@ -5,7 +5,9 @@
   --lightGreen: #8eba36;
       --purple:#ccccf5   
     }
-
+body{
+  background: #357479;
+}
 a{
   background-color:inherit ; 
   color: var(--white);
